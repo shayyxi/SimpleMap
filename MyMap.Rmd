@@ -1,0 +1,18 @@
+---
+title: "MyMap"
+author: "Shazi"
+date: "7/18/2020"
+output: html_document
+---
+
+## July 18, 2020
+
+```{r message=FALSE}
+library(leaflet)
+df<-data.frame(name=c("My Dormitory","My Super Store"),lat=c(47.526225,47.526980),lng=c(19.084538,19.083020))
+df %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(popup=df$name) 
+```
+
